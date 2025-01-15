@@ -2,10 +2,11 @@ import cv2
 import requests
 import matplotlib.pyplot as plt
 from ultralytics import YOLO
+import os
 
 # Telegram bot token and chat ID
-BOT_TOKEN = 'past here ure bot token'
-CHAT_ID = 'past here ure bot id'
+BOT_TOKEN = os.environ.get('past here ure bot token')
+CHAT_ID = os.environ.get('past here ure bot id')
 
 # Function to send a message and image to Telegram
 def send_telegram_message(image):
